@@ -8,5 +8,16 @@ pipeline {
                 sh './gradlew build'
             }
         }
+
+        stage('Test') {
+                    steps {
+                        echo 'Testing..'
+                    }
+                }
+        stage('Deploy') {
+               steps {
+                        echo 'Deploying....'
+               }
+        }
     }
 }
