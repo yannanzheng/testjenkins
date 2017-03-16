@@ -1,5 +1,15 @@
 group 'com.thoughtworks'
 version '1.0-SNAPSHOT'
+buildscript{
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+
+    }
+
+}
 
 apply plugin: 'java'
 
