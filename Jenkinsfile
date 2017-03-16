@@ -12,13 +12,13 @@ pipeline {
         stage('Test') {
                     steps {
                         echo 'Testing..'
-                        sh 'make check || true'
-                        junit '**/target/*.xml'
+                        sh './gradlew test'
                     }
                 }
         stage('Deploy') {
                steps {
                         echo 'Deploying....'
+
                }
         }
     }
