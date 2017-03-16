@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    environment{
+        testVar = "testVar"
+
+    }
+
     stages {
         stage('Build') {
             steps {
@@ -17,6 +22,7 @@ pipeline {
                 }
         stage('Deploy') {
                steps {
+                        echo '${testVar}hahahahah'
                         echo 'Deploying....'
                         sh './gradlew build'
 
