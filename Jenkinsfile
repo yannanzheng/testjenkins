@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment{
-        testVar = "testVar"
+        testVar = "testVar12234"
 
     }
 
