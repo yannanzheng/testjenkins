@@ -22,7 +22,7 @@ pipeline {
                 }
         stage('Deploy') {
                steps {
-                        echo '${testVar}hahahahah'
+                        echo '$\{testVar\}hahahahah'
                         echo 'Deploying....'
                         sh './gradlew tasks'
 
