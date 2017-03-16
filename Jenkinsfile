@@ -1,8 +1,6 @@
 pipeline {
     agent any
-    node {
-        checkout scm
-    }
+
     stages {
         stage('Build') {
             steps {
@@ -14,6 +12,8 @@ pipeline {
         stage('Test') {
                     steps {
                         echo 'Testing..'
+                        sh 'make check || true'
+                        junit '**/target/*.xml'
                     }
                 }
         stage('Deploy') {
