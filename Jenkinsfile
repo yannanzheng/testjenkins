@@ -24,7 +24,7 @@ pipeline {
                steps {
                         echo '${testVar}hahahahah'
                         echo 'Deploying....'
-                        sh './gradlew build'
+                        sh './gradlew tasks'
 
                }
         }
